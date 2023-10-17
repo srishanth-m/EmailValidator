@@ -47,3 +47,27 @@ main{
 .container h1{
     padding: 10px 0px 10px 0px;
 }
+
+#resultCont div::first-letter{
+    text-transform: uppercase;
+}
+
+#username{
+    margin: 10px 0px;
+    width: 25vw;
+    height: 25px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn{
+    padding: 7px ;
+    width: 10vw;
+    background-color:  rgb(244, 150, 88);
+    font-size: large;
+}
+
+.btn:hover{
+    color: white;
+    cursor: pointer;
+}

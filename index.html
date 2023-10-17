@@ -24,27 +24,18 @@
         <div class="container">
             <h1>Enter Your Email To Validate</h1>
             <form action="/submit" method="post">
-                <!-- Text input for username -->
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                
+                <input type="text" id="username" name="username" placeholder="Email :">
                 <br><br>
             
-                <!-- Password input -->
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <br><br>
-            
-                <!-- Radio buttons for gender -->
-                <label>Gender:</label>
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <br><br>
-            
-                <!-- Submit button -->
-                <input type="submit" value="Submit">
+                <button class="btn"> Submit </button>
               </form>
+        </div>
+        <div class="container">
+            <h2>Your Results</h2>
+            <div id="resultCont">
+                
+            </div>
         </div>
     </main>
     <script src="js/index.js"></script>
