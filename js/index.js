@@ -16,11 +16,26 @@ let result = {
     "format_valid": true
 };
 
-let str = ``;
 
-for (key of Object.keys(result)) {
-    str = str + `<div>${key} : ${result[key]}</div>`
-}
 
-// console.log(str)
-resultCont.innerHTML = str;
+
+submitBtn.addEventListener("click" ,async ()=>{
+    console.log("clicked")
+    resultCont.innerHTML = `<img src="loading.svg" width="100px" height="100px" alt="">`
+    let key = "ema_live_LVsoUSgLOc2x1sVQe32CfZPsNM9CLm9DAXe7xrMB";
+    let email = document.getElementById("username").value
+
+    let url = `https://api.emailvalidation.io/v1/info?apikey=${key}&email=${email}`
+    let res = await fetch(url)
+    let result = await res.json();
+    let str = ``;
+    
+    for (key of Object.keys(result)) {
+        if(result[key] !== "" && result[key] !== " "){
+            str = str + `<div>${key} : ${result[key]}</div>`
+        }
+    }
+    
+    // console.log(str)
+    resultCont.innerHTML = str;
+})
